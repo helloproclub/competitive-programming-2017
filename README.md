@@ -21,3 +21,11 @@ awesome-cp-repo
 │       │   ability_to_convert_758D_codeforces.py
 │       │   beautiful_days_in_movies_hackerrank.py
 ```
+
+### Notes 
+Please don't include build files.
+
+C++, Python, Java, Netbeans, Codeblock, & Jetbrains IDE already igonored.
+
+
+## DreamThinkCode2017
