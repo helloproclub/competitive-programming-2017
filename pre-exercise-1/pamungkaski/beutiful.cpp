@@ -2,11 +2,14 @@
 // Created by Ki Ageng Satria Pamungkas on 3/26/17.
 //
 #include <cmath>
+#include <cstdio>
+#include <vector>
 #include <iostream>
-#include <string>
+#include <algorithm>
 using namespace std;
 int main(){
-    long int i,j,k,ans,temp;
+    long int i,j,k,temp;
+    long int ans = 0;
     string dummy;
     cin>>i>>j>>k;
     for (int l = i; l <=j ; ++l) {

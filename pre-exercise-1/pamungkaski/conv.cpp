@@ -2,8 +2,10 @@
 // Created by Ki Ageng Satria Pamungkas on 3/26/17.
 //
 #include <cmath>
+#include <cstdio>
+#include <vector>
 #include <iostream>
-#include <string>
+#include <algorithm>
 using namespace std;
 
 int main() {
@@ -12,7 +14,7 @@ int main() {
     string k;
     cin >> k;
     string sBase;
-    long long int iBase;
+    long long int iBase=0;
     long long int cBase=0;
     sBase= to_string(n);
     long long int pN = sBase.size();
@@ -39,8 +41,8 @@ int main() {
         base[cBase]=iBase;
         cBase++;
     }
-    long long int ans;
-    for (int i = 0; i <cBase; ++i) {
+    long long int ans=0;
+    for (int i = 0; i <1; ++i) {
         ans= ans+(base[i]*(pow(n,i)));
     }
     cout<<ans<<endl;
