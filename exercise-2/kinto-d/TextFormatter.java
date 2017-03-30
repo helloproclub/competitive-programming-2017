@@ -1,12 +1,6 @@
-package com.kinto;
-
 import java.util.Scanner;
 
-/**
- * Created by g40 on 29/03/17.
- */
-
-public class TextFormatter {
+ class TextFormatter {
 
     public static void main(String[] args) {
 
