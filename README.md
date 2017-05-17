@@ -24,11 +24,7 @@ awesome-cp-repo
 
 ### Notes 
 * Please don't include build files.
-* C++, Python, Java, Netbeans, Codeblock, & Jetbrains IDE already igonored.
-* Semua yang telah join organization helloproclub, punya hak akses write.
-* Kalau belum join, mohon bilang di group.
-* Karena File Dokumentasi telah distrukturkan seperti diatas, harusnya tidak bakal / tidak ada yang konflik.
-
+* C++, Python, Java, Netbeans, Codeblock, & Jetbrains IDE stuff already ignored.
+* Documentation already has a structured, should not be conflict
 
 ## DreamThinkCode2017
-
