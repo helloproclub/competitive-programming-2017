@@ -46,7 +46,7 @@ int main(){
             }
         }
         if(i != t-1){
-            printf;
+            cout << endl;
         }
     }
     return 0;
