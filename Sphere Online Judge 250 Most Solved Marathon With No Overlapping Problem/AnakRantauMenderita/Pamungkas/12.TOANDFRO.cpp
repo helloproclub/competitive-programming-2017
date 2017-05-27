@@ -17,7 +17,7 @@ int main(){
         for (int i = 0; i <n ; ++i) {
             dmy = i;
             sia = true;
-            while(dmy <=s.length()){
+            while(dmy <s.length()){
                 cout << s[dmy];
                 if(sia){
                     dmy += 2 * n - x;
