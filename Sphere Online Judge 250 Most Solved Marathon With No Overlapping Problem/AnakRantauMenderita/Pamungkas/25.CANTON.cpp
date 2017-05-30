@@ -17,19 +17,28 @@ int main(){
             if (i == 1) {
                 j += 1;
                 counter++;
-                while ((j != 1) and(counter<n)){
-                    i++;
-                    j--;
-                    counter++;
-                }
+                i = j;
+                j = 1;
+                counter +=(i-1);
             } else if (j == 1) {
                 i += 1;
                 counter++;
-                while ((i != 1)and(counter<n)) {
-                    j++;
-                    i--;
-                    counter++;
-                }
+                j = i;
+                i = 1;
+                counter+=(j-1);
+            }
+        }
+        if(i == 1){
+            while (counter>n){
+                j--;
+                i++;
+                counter--;
+            }
+        }else if(j == 1){
+            while (counter>n){
+                i--;
+                j++;
+                counter--;
             }
         }
         cout << "TERM "<< n << " IS "<<i<<'/'<<j<<endl;
