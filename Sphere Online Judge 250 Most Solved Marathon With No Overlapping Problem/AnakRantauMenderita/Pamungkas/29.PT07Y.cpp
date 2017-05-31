@@ -14,6 +14,11 @@ bool isTree(long parent,vector <long> &visited, node nodes[] ){
     bool nocycle = true;
     visited.push_back(parent);
     for (int i = 0; i <nodes[parent].eddest.size() ; ++i) {
+//        for (int j = 0; j <visited.size() ; ++j) {
+//            cout << visited[j];
+//        }
+//        cout << endl;
+//        cout << nodes[parent].eddest[i] << endl;
         if(find(visited.begin(),visited.end(),nodes[parent].eddest[i])!=visited.end()){
             nocycle = false;
             break;
@@ -37,7 +42,7 @@ int main(){
             damn = false;
         }
         nodes[x].eddest.push_back(y);
-        nodes[y].edsrc.push_back(y);
+        nodes[y].edsrc.push_back(x);
     }
     if(N-1 != M){
         damn = false;
