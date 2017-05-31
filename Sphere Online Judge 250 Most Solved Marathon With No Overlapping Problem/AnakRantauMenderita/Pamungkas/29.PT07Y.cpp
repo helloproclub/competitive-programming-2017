@@ -18,7 +18,7 @@ bool isTree(long parent,vector <long> &visited, node nodes[] ){
             nocycle = false;
             break;
         }else{
-            isTree(nodes[parent].eddest[i],visited,nodes);
+            nocycle = isTree(nodes[parent].eddest[i],visited,nodes);
         }
     }
     return nocycle;
@@ -44,7 +44,7 @@ int main(){
     }
     vector <long> visited;
     if(damn){
-        isTree(1, visited, nodes);
+        damn = isTree(1, visited, nodes);
     }
     if(damn){
         cout << "YES" << endl;
