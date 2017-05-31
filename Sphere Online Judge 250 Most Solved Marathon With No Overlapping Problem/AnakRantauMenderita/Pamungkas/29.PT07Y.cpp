@@ -7,26 +7,16 @@
 using namespace std;
 struct node{
     long info;
-    vector <long> edsrc;
-    vector <long> eddest;
+    vector <long> con;
 };
-bool isTree(long parent,vector <long> &visited, node nodes[] ){
-    bool nocycle = true;
+vector <long> visited;
+void dfs(long parent, node nodes[] ){
     visited.push_back(parent);
-    for (int i = 0; i <nodes[parent].eddest.size() ; ++i) {
-//        for (int j = 0; j <visited.size() ; ++j) {
-//            cout << visited[j];
-//        }
-//        cout << endl;
-//        cout << nodes[parent].eddest[i] << endl;
-        if(find(visited.begin(),visited.end(),nodes[parent].eddest[i])!=visited.end()){
-            nocycle = false;
-            break;
-        }else{
-            nocycle = isTree(nodes[parent].eddest[i],visited,nodes);
+    for (int i = 0; i <nodes[parent].con.size() ; ++i) {
+        if(find(visited.begin(),visited.end(),nodes[parent].con[i])==visited.end()) {
+            dfs(nodes[parent].con[i], nodes);
         }
     }
-    return nocycle;
 }
 int main(){
     long M, N, x, y;
@@ -41,27 +31,19 @@ int main(){
         if( x==y ){
             damn = false;
         }
-        nodes[x].eddest.push_back(y);
-        nodes[y].edsrc.push_back(x);
+        nodes[x].con.push_back(y);
+        nodes[y].con.push_back(x);
     }
     if(N-1 != M){
         damn = false;
     }
-    vector <long> visited;
-    if(damn){
-        damn = isTree(1, visited, nodes);
+    dfs(1,nodes);
+    if(visited.size()!=N){
+        damn = false;
     }
     if(damn){
         cout << "YES" << endl;
     }else{
         cout << "NO" << endl;
     }
-
-//    for (int i = 1; i <=N ; ++i) {
-//        cout<< i <<" Neighbour :"<<endl;
-//        for (int j = 0; j <nodes[i].edges.size() ; ++j) {
-//            cout<< nodes[i].edges[j]->info<<" ";
-//        }
-//        cout << endl;
-//    }
 }
